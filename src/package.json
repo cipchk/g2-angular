@@ -1,0 +1,10 @@
+{
+  "name": "g2-angular",
+  "dependencies": {
+  },
+  "peerDependencies": {
+    "@angular/common": ">=4.0.0",
+    "@angular/core": ">=4.0.0",
+    "g2": ">=1.2.6"
+  }
+}
