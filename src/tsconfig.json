@@ -29,7 +29,6 @@
   ],
   "files": [
     "../scripts/typings.d.ts",
-    "./g2-angular.ts",
     "./index.ts"
   ],
   "angularCompilerOptions": {

@@ -9,6 +9,7 @@ declare var window: any;
   template: ``
 })
 export class G2ChartComponent implements OnDestroy, OnChanges {
+  static idPool = 0;
   private instance: any;
   private id: string;
   private initFlag: boolean = false;
@@ -28,7 +29,7 @@ export class G2ChartComponent implements OnDestroy, OnChanges {
 
   ngOnInit() {
     // 构建一个虚拟id
-    this.id = 'angular-g2-' + new Date().getTime();
+    this.id = 'angular-g2-' + ++G2ChartComponent.idPool;
     this.el.nativeElement.id = this.id;
     this.initFlag = true;
 
