@@ -6,7 +6,8 @@ Angular for Alipay [G2](https://antv.alipay.com/)
 
 ## Demo
 
-[Live Demo](https://cipchk.github.io/g2-angular/) or [plnkr](http://embed.plnkr.co/TruzbbWr3Hk16ftvO66v/)
+- [Live Demo](https://cipchk.github.io/g2-angular/)
+- [Stackblitz](https://stackblitz.com/edit/g2-angular)
 
 ## Install
 
@@ -57,7 +58,7 @@ import { G2ChartModule } from 'g2-angular';
 ## How to use it with:
 
 + `angular-cli` please refer to [demo](./demo/src/app/).
-+ `plnkr` sample available [here](http://embed.plnkr.co/TruzbbWr3Hk16ftvO66v/).
++ `Stackblitz` sample available [here](https://stackblitz.com/edit/g2-angular).
 
 ## Troubleshooting
 

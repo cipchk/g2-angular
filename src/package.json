@@ -1,6 +1,0 @@
-{
-  "name": "g2-angular",
-  "peerDependencies": {
-    "g2": ">=1.2.6"
-  }
-}
