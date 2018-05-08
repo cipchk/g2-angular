@@ -1,6 +1,6 @@
 {
   "name": "g2-angular",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "main": "./bundles/g2.umd.js",
   "module": "./esm5/g2.js",
   "es2015": "./esm2015/g2.js",
