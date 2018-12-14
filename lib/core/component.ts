@@ -9,17 +9,18 @@ import {
   SimpleChanges,
   OnInit,
   ChangeDetectionStrategy,
-  ChangeDetectorRef,
+  ViewEncapsulation
 } from '@angular/core';
+import { LazyService } from 'nu-lazy';
 import { G2ChartConfig } from './config';
-import { LoaderService } from './load.service';
 
 declare var window: any;
 
 @Component({
   selector: 'g2-chart',
   template: ``,
-  styles: [ `:host { display: block; } ` ],
+  styles: [ `g2-chart { display: block; } ` ],
+  encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
@@ -35,8 +36,7 @@ export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
   constructor(
     private el: ElementRef,
     private config: G2ChartConfig,
-    private ss: LoaderService,
-    private cd: ChangeDetectorRef
+    private lazySrv: LazyService
   ) {}
 
   ngOnInit() {
@@ -51,11 +51,7 @@ export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
       return;
     }
 
-    this.ss
-      .load(this.config.js)
-      .then(res => {
-        this.init();
-      });
+    this.lazySrv.load(this.config.js).then(() => this.init());
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -88,8 +84,6 @@ export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
 
   /**
    * 获取Chart实例
-   *
-   * @readonly
    */
   get Instance(): any {
     return this.instance;

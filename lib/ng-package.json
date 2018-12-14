@@ -3,10 +3,14 @@
   "dest": "../publish",
   "deleteDestPath": true,
   "lib": {
-    "entryFile": "g2-angular.module.ts"
+    "entryFile": "g2-angular.module.ts",
+    "umdModuleIds": {
+      "nu-lazy": "nu.lazy"
+    }
   },
   "whitelistedNonPeerDependencies": [
     "tslib",
-    "angular"
+    "angular",
+    "nu-lazy"
   ]
 }

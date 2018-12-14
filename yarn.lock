@@ -5251,6 +5251,13 @@ npm-run-path@^2.0.0:
     gauge "~2.7.3"
     set-blocking "~2.0.0"
 
+nu-lazy@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.npmjs.org/nu-lazy/-/nu-lazy-0.0.1.tgz#8c06f4ce1844aba8200adf8eee5ae02cdac660c4"
+  integrity sha512-KKNCkdMLiJk65s3J4k4wfyNnIQ45eXpQ1P79H09aPvSe5iKBfC8lKmS4M7i06lNJjlD4z8bAvAVE6k4jeNZrLQ==
+  dependencies:
+    tslib "^1.9.0"
+
 null-check@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/null-check/-/null-check-1.0.0.tgz#977dffd7176012b9ec30d2a39db5cf72a0439edd"

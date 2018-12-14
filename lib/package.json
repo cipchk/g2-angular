@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/cipchk/g2-angular/issues"
   },
-  "homepage": "https://github.com/cipchk/g2-angular#readme"
+  "homepage": "https://github.com/cipchk/g2-angular#readme",
+  "dependencies": {
+    "nu-lazy": "^7.0.0"
+  }
 }
