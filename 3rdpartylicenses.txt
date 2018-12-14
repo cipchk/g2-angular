@@ -326,6 +326,9 @@ MIT
 g2-angular
 MIT
 
+nu-lazy
+MIT
+
 @angular/forms
 MIT
 
