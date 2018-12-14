@@ -7,8 +7,7 @@
     "module": "es2015",
     "types": [],
     "paths": {
-      "g2-angular": ["../lib/index"],
-      "g2-angular/*": ["../lib/*"]
+      "g2-angular": ["../lib/g2-angular.module"]
     }
   },
   "exclude": ["test.ts", "**/*.spec.ts"]

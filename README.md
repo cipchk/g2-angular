@@ -25,11 +25,11 @@ npm install g2-angular --save
 npm install g2 --save
 ```
 
-You can choose load `g2` script file via `.angular-cli.json` or Lazy load.
+You can choose load `g2` script file via `angular.json` or Lazy load.
 
 *(Recommend)*
 ```json
-// .angular-cli.json
+// angular.json
 "scripts": [
   "../node_modules/g2/index.js"
 ]
@@ -43,7 +43,7 @@ import { G2ChartModule } from 'g2-angular';
 @NgModule({
   imports: [
     G2ChartModule.forRoot({
-      js: 'https://a.alipayobjects.com/g/datavis/g2/2.3.9/index.js'
+      js: 'https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.4.1/dist/g2.min.js'
     })
   ]
 });
@@ -52,7 +52,7 @@ import { G2ChartModule } from 'g2-angular';
 **B: index.html**
 
 ```html
-<script src="https://a.alipayobjects.com/g/datavis/g2/2.3.9/index.js"></script>
+<script src="https://gw.alipayobjects.com/os/antv/pkg/_antv.g2-3.4.1/dist/g2.min.js"></script>
 ```
 
 ## How to use it with:

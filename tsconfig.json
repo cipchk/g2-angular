@@ -12,8 +12,7 @@
     "lib": ["es2017", "dom"],
     "baseUrl": "./",
     "paths": {
-      "g2-angular": ["./lib/g2-angular.module"],
-      "g2-angular/*": ["./lib/*"]
+      "g2-angular": ["./lib/g2-angular.module"]
     }
   }
 }

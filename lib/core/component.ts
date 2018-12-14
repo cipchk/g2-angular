@@ -3,13 +3,13 @@ import {
   Input,
   OnDestroy,
   OnChanges,
-  ViewChild,
   ElementRef,
   Output,
   EventEmitter,
-  NgZone,
   SimpleChanges,
   OnInit,
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
 } from '@angular/core';
 import { G2ChartConfig } from './config';
 import { LoaderService } from './load.service';
@@ -19,7 +19,8 @@ declare var window: any;
 @Component({
   selector: 'g2-chart',
   template: ``,
-  styles: [ `:host { display: block; } ` ]
+  styles: [ `:host { display: block; } ` ],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
   static idPool = 0;
@@ -28,18 +29,15 @@ export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
   private initFlag = false;
 
   @Input() options: any;
-  @Output() ready = new EventEmitter<any>();
-  @Output() destroy = new EventEmitter();
+  @Output() readonly ready = new EventEmitter<any>();
+  @Output() readonly destroy = new EventEmitter();
 
   constructor(
     private el: ElementRef,
     private config: G2ChartConfig,
     private ss: LoaderService,
+    private cd: ChangeDetectorRef
   ) {}
-
-  ngOnChanges(changes: SimpleChanges): void {
-    if ('options' in changes) this.init();
-  }
 
   ngOnInit() {
     // 构建一个虚拟id
@@ -58,6 +56,10 @@ export class G2ChartComponent implements OnInit, OnDestroy, OnChanges {
       .then(res => {
         this.init();
       });
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if ('options' in changes) this.init();
   }
 
   private init(options?: any) {

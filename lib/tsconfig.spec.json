@@ -4,6 +4,7 @@
     "outDir": "../out-tsc/spec",
     "baseUrl": "./",
     "module": "commonjs",
+    "esModuleInterop": true,
     "target": "es5",
     "types": [
       "jasmine",
@@ -12,7 +13,7 @@
   },
   "files": [
     "test.ts",
-    "../src/polyfills.ts"
+    "polyfills.ts"
   ],
   "include": [
     "**/*.spec.ts",

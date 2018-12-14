@@ -1,0 +1,22 @@
+{
+  "name": "g2-angular",
+  "version": "0.0.0-PLACEHOLDER",
+  "description": "Angular for Alipay G2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cipchk/g2-angular.git"
+  },
+  "keywords": [
+    "g2-angular",
+    "ng2-gesture-password",
+    "gesture",
+    "gesture password",
+    "hand lock"
+  ],
+  "author": "cipchk <cipchk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cipchk/g2-angular/issues"
+  },
+  "homepage": "https://github.com/cipchk/g2-angular#readme"
+}
